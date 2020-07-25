@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LabApp</string>
+    <string name="title_activity_operator_menu">OperatorMenu</string>
+</resources>
