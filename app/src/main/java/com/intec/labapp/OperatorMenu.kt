@@ -9,11 +9,11 @@ class OperatorMenu : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.operator_menu)
+        setContentView(R.layout.activity_operator_menu)
 
         val buttonInst = findViewById<Button>(R.id.solicitarInst)
         buttonInst.setOnClickListener{
-            val intent = Intent(this, SolicitarInstalacion::class.java)
+            val intent = Intent(this, RequestInstallation::class.java)
             startActivity(intent)
         }
     }

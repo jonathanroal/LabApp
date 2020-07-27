@@ -9,7 +9,16 @@
         android:roundIcon="@mipmap/labapp_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".SolicitarInstalacion"></activity>
+        <activity
+            android:name=".LogView"
+            android:label="@string/title_activity_log_view"
+            android:theme="@style/NoActionBar"></activity>
+        <activity android:name=".RequestLogs" />
+        <activity
+            android:name=".LogScreen"
+            android:label="@string/title_activity_log_screen"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".RequestInstallation" />
         <activity
             android:name=".OperatorMenu"
             android:label="@string/title_activity_operator_menu"
