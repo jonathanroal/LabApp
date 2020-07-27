@@ -13,10 +13,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.menu)
 
         val buttonOperator = findViewById<ImageButton>(R.id.operatorButton)
-
         buttonOperator.setOnClickListener{
             val intent = Intent(this, OperatorMenu::class.java)
             startActivity(intent)
         }
+
+
+    }
+
+    override fun onBackPressed() {
+        // do something
     }
 }

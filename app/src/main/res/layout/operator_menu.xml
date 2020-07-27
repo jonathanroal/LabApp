@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
-        android:layout_width="418dp"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:background="@color/colorAccent"
         android:minHeight="?attr/actionBarSize"
@@ -20,4 +21,45 @@
         app:titleMarginStart="20dp"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
         app:titleTextColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/solicitarInst"
+        android:layout_width="0dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/round"
+        android:text="Solicitar Instalación"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <Button
+        android:id="@+id/consultarOp"
+        android:layout_width="0dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/round"
+        android:text="CONSULTAR OPERADOR ACTUAL"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solicitarInst" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@color/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
