@@ -31,5 +31,19 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, RequestLogs::class.java)
             startActivity(intent)
         }
+
+
+        val reportButton = findViewById<ImageButton>(R.id.reportButton)
+        reportButton.setOnClickListener{
+            val intent = Intent(this, ReportIssues::class.java)
+            startActivity(intent)
+        }
+
+        val chatButton = findViewById<ImageButton>(R.id.chatButton)
+        chatButton.setOnClickListener{
+            val intent = Intent(this, ChatOperador::class.java)
+            startActivity(intent)
+        }
+
     }
 }

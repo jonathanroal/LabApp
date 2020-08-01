@@ -17,6 +17,12 @@ class OperatorMenu : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val consultarOp = findViewById<Button>(R.id.consultarOp)
+        consultarOp.setOnClickListener{
+            val intent = Intent(this, InfoOperador::class.java)
+            startActivity(intent)
+        }
+
     }
 }
 

@@ -1,8 +1,10 @@
 package com.intec.labapp
 
+import android.app.AlertDialog
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -35,32 +37,13 @@ class RequestInstallation : AppCompatActivity() {
             }
         }
 
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage(R.string.Enviado)
+        builder.setTitle(R.string.EnviadoTitulo)
+
         val buttonEnviar = findViewById<Button>(R.id.enviar)
         buttonEnviar.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            val descContent = descriptionText.text.toString()
-            if (descContent == ""){
-
-            }
-            else {
-
-                createNotificationChannel()
-
-                var builder = NotificationCompat.Builder(this, "1")
-                    .setSmallIcon(R.drawable.person_calendar)
-                    .setContentTitle("Solicitud enviada")
-                    .setContentText("Tu solicitud a sido enviada con exito!")
-                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                    .setAutoCancel(true)
-
-                with(NotificationManagerCompat.from(this)) {
-                    // notificationId is a unique int for each notification that you must define
-                    notify(1, builder.build())
-                }
-
-                startActivity(intent);
-            }
+            builder.create().show()
         }
     }
 
