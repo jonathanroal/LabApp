@@ -11,15 +11,15 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import kotlinx.android.synthetic.main.activity_solicitar_instalacion.*
+import kotlinx.android.synthetic.main.activity_request_installation.*
 
-class SolicitarInstalacion : AppCompatActivity() {
+class RequestInstallation : AppCompatActivity() {
 
     var clickFlag = false;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_solicitar_instalacion)
+        setContentView(R.layout.activity_request_installation)
 
         initView()
 
