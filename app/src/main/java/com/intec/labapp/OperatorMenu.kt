@@ -16,6 +16,7 @@ class OperatorMenu : AppCompatActivity() {
             val intent = Intent(this, RequestInstallation::class.java)
             startActivity(intent)
         }
+
     }
 }
 
