@@ -4,16 +4,11 @@ import android.app.AlertDialog
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
-import android.content.DialogInterface
-import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
-import kotlinx.android.synthetic.main.activity_request_installation.*
 
 class RequestInstallation : AppCompatActivity() {
 
@@ -23,11 +18,11 @@ class RequestInstallation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request_installation)
 
-        initView()
+        initComponents()
 
     }
 
-    fun initView(){
+    fun initComponents(){
 
         val titleText: EditText = findViewById(R.id.editText) as EditText
         titleText.setOnClickListener {
@@ -41,9 +36,12 @@ class RequestInstallation : AppCompatActivity() {
         builder.setMessage(R.string.Enviado)
         builder.setTitle(R.string.EnviadoTitulo)
 
-        val buttonEnviar = findViewById<Button>(R.id.enviar)
+        val buttonEnviar = findViewById<Button>(R.id.sendButton)
         buttonEnviar.setOnClickListener{
             builder.create().show()
+            val issueText: EditText = findViewById(R.id.chatText) as EditText
+            issueText.setText("")
+            titleText.setText("")
         }
     }
 

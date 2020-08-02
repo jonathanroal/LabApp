@@ -2,7 +2,6 @@ package com.intec.labapp
 
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_log_view.*
 

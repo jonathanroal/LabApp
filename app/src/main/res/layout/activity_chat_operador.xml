@@ -7,8 +7,25 @@
     android:background="@color/colorPrimary"
     tools:context=".RequestInstallation">
 
+    <EditText
+        android:id="@+id/sendText"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="Escribe aqui"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatText" />
+
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar3"
+        android:id="@+id/chatTitle"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:background="@color/colorAccent"
@@ -24,53 +41,50 @@
         app:titleTextColor="@color/colorPrimary" />
 
     <EditText
-        android:id="@+id/descriptionText"
-        android:layout_width="367dp"
-        android:layout_height="351dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginEnd="13dp"
+        android:id="@+id/chatText"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="21dp"
         android:autoSizeTextType="uniform"
         android:background="@drawable/round"
         android:backgroundTint="@color/design_default_color_primary"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine"
+        android:inputType="none"
         android:padding="10dp"
-        android:text="Tu: \n Operator: \n\n\nTu: \n Operator: \n\n\nTu: \n Operator: \n\n\nTu: \n Operator: \n\n\nTu: \n Operator:"
-        app:layout_constraintBottom_toTopOf="@+id/enviar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
-        app:layout_constraintVertical_bias="0.183" />
+        app:layout_constraintTop_toBottomOf="@+id/chatTitle" />
 
     <Button
-        android:id="@+id/enviar"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="13dp"
+        android:id="@+id/sendButton"
+        android:layout_width="102dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="13dp"
-        android:layout_marginBottom="41dp"
         android:background="@drawable/round"
         android:text="ENVIAR"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/sendText"
+        app:layout_constraintTop_toBottomOf="@+id/chatText" />
 
     <Button
         android:id="@+id/chatOperador"
         android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="132dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/round"
         android:text="CHAT CORDINADOR     "
         android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

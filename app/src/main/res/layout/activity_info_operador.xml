@@ -8,7 +8,7 @@
     tools:context=".RequestInstallation">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar3"
+        android:id="@+id/chatTitle"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:background="@color/colorAccent"
@@ -24,8 +24,8 @@
         app:titleTextColor="@color/colorPrimary" />
 
     <EditText
-        android:id="@+id/descriptionText"
-        android:layout_width="367dp"
+        android:id="@+id/chatText"
+        android:layout_width="0dp"
         android:layout_height="351dp"
         android:layout_marginStart="13dp"
         android:layout_marginTop="96dp"
@@ -35,20 +35,19 @@
         android:backgroundTint="@color/design_default_color_primary"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine"
+        android:inputType="none"
         android:padding="10dp"
         android:text="Entrada: 9:00 am\nSalida: 7:00 p  m\nTurnos: Lunes"
-        app:layout_constraintBottom_toTopOf="@+id/enviar"
+        app:layout_constraintBottom_toTopOf="@+id/sendButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        app:layout_constraintTop_toBottomOf="@+id/chatTitle"
         app:layout_constraintVertical_bias="0.769" />
 
     <EditText
         android:id="@+id/descriptionText2"
-        android:layout_width="333dp"
-        android:layout_height="47dp"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
         android:layout_marginStart="13dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="13dp"
@@ -57,15 +56,15 @@
         android:backgroundTint="@color/design_default_color_primary"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType=""
+        android:inputType="none"
         android:padding="10dp"
         android:text="Jonathan Rojas"
         android:textAlignment="center"
-        android:textSize="29dp"
-        app:layout_constraintBottom_toTopOf="@+id/enviar"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/sendButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        app:layout_constraintTop_toBottomOf="@+id/chatTitle"
         app:layout_constraintVertical_bias="0.078"
         tools:ignore="RtlCompat" />
 

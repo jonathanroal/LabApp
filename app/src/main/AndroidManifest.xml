@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity android:name=".InfoOperador"></activity>
-        <activity android:name=".ChatCoordinador" />
         <activity android:name=".ChatOperador" />
         <activity android:name=".ReportIssues" />
         <activity
