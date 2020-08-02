@@ -103,4 +103,15 @@
     <string name="ChatT">Mensaje Enviado</string>
     <string name="IniciaLlamada">Iniciando la llamada</string>
     <string name="Contactar">Contactar</string>
+
+    <string-array name="days">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sabado</item>
+        <item>Domingo</item>
+    </string-array>
+
 </resources>

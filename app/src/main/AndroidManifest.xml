@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/labapp_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".InfoOperador"></activity>
+        <activity android:name=".LabSchedule"></activity>
+        <activity android:name=".InfoOperador" />
         <activity android:name=".ChatOperador" />
         <activity android:name=".ReportIssues" />
         <activity

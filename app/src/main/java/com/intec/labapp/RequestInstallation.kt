@@ -38,14 +38,23 @@ class RequestInstallation : AppCompatActivity() {
 
         val buttonEnviar = findViewById<Button>(R.id.sendButton)
         buttonEnviar.setOnClickListener{
-            builder.create().show()
+
             val issueText: EditText = findViewById(R.id.chatText) as EditText
-            issueText.setText("")
-            titleText.setText("")
+            val mainStr: String =titleText.text.toString()
+            val issueStr: String = issueText.text.toString()
+            if(mainStr==""||issueStr==""){
+                //do nothing
+            }
+            else{
+                builder.create().show()
+                issueText.setText("")
+                titleText.setText("")
+            }
+
         }
     }
 
-    private fun createNotificationChannel() {
+    /*private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -60,5 +69,5 @@ class RequestInstallation : AppCompatActivity() {
                 getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
         }
-    }
+    }*/
 }

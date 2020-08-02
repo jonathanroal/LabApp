@@ -20,6 +20,9 @@ class ChatOperador : AppCompatActivity() {
 
     fun initComponents(){
 
+        val chatText: EditText = findViewById(R.id.chatText) as EditText
+        chatText.isEnabled=false
+
         val sendText: EditText = findViewById(R.id.sendText) as EditText
         sendText.setOnClickListener {
             if(!clickFlag){
@@ -45,7 +48,6 @@ class ChatOperador : AppCompatActivity() {
             }
             else{
                 sendText.setText("");
-                val chatText: EditText = findViewById(R.id.chatText) as EditText
                 val cStr: String = chatText.text.toString()
                 if(cStr==""){
                     chatText.setText(cStr + "Yo: " + str)

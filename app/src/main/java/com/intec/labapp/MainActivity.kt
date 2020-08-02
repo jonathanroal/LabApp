@@ -20,9 +20,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun initComponents(){
+
         val buttonOperator = findViewById<ImageButton>(R.id.operatorButton)
         buttonOperator.setOnClickListener{
             val intent = Intent(this, OperatorMenu::class.java)
+            startActivity(intent)
+        }
+
+        val buttonSchedule = findViewById<ImageButton>(R.id.scheduleButton)
+        buttonSchedule.setOnClickListener{
+            val intent = Intent(this, LabSchedule::class.java)
             startActivity(intent)
         }
 

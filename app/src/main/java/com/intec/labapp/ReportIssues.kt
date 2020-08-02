@@ -24,6 +24,7 @@ class ReportIssues : AppCompatActivity() {
                 clickFlag = true
             }
         }
+        val issueText: EditText = findViewById(R.id.chatText) as EditText
 
         val x = AlertDialog.Builder(this)
         x.setMessage(R.string.Enviado)
@@ -35,10 +36,17 @@ class ReportIssues : AppCompatActivity() {
 
         val send = findViewById<Button>(R.id.send)
         send.setOnClickListener{
-            x.create().show()
-            val issueText: EditText = findViewById(R.id.chatText) as EditText
-            issueText.setText("")
-            titleText.setText("")
+            if(titleText.text.toString()==""||issueText.text.toString()=="")
+            {
+                //do nothing
+            }
+            else{
+                x.create().show()
+
+                issueText.setText("")
+                titleText.setText("")
+            }
+
         }
 
         val adj_pic = findViewById<Button>(R.id.adj_pic)
