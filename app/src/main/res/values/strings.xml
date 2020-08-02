@@ -93,4 +93,25 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_log_view">LogView</string>
+    <string name="Enviado">Se ha enviado la solicitud!</string>
+    <string name="fire">fire</string>
+    <string name="cancel">cancel</string>
+    <string name="EnviadoTitulo">Enviado</string>
+    <string name="SendPic">Adjuntar Imagen</string>
+    <string name="Imagen">Imagen Adjuntada</string>
+    <string name="Chat">Se envio el mensaje</string>
+    <string name="ChatT">Mensaje Enviado</string>
+    <string name="IniciaLlamada">Iniciando la llamada</string>
+    <string name="Contactar">Contactar</string>
+
+    <string-array name="days">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sabado</item>
+        <item>Domingo</item>
+    </string-array>
+
 </resources>

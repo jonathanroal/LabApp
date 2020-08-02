@@ -7,6 +7,23 @@
     android:background="@color/colorPrimary"
     tools:context=".RequestInstallation">
 
+    <EditText
+        android:id="@+id/sendText"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="Escribe aqui"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatText" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/chatTitle"
         android:layout_width="0dp"
@@ -18,67 +35,56 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Solicitar Instalacion"
+        app:title="Chat Operador"
         app:titleMarginStart="20dp"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
         app:titleTextColor="@color/colorPrimary" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="13dp"
-        android:background="@drawable/round"
-        android:backgroundTint="@color/design_default_color_primary"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:maxLines="1"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:text="Asunto..."
-        app:layout_constraintBottom_toTopOf="@+id/chatText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
         android:id="@+id/chatText"
         android:layout_width="0dp"
         android:layout_height="350dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="21dp"
         android:autoSizeTextType="uniform"
         android:background="@drawable/round"
         android:backgroundTint="@color/design_default_color_primary"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine"
+        android:inputType="none"
         android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/sendButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/chatTitle" />
 
     <Button
         android:id="@+id/sendButton"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="13dp"
+        android:layout_width="102dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="13dp"
-        android:layout_marginBottom="41dp"
         android:background="@drawable/round"
         android:text="ENVIAR"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/sendText"
+        app:layout_constraintTop_toBottomOf="@+id/chatText" />
+
+    <Button
+        android:id="@+id/chatOperador"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/round"
+        android:text="CHAT CORDINADOR     "
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

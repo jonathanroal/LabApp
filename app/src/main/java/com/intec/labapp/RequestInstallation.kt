@@ -1,17 +1,14 @@
 package com.intec.labapp
 
+import android.app.AlertDialog
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
-import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
-import kotlinx.android.synthetic.main.activity_request_installation.*
 
 class RequestInstallation : AppCompatActivity() {
 
@@ -21,11 +18,11 @@ class RequestInstallation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request_installation)
 
-        initView()
+        initComponents()
 
     }
 
-    fun initView(){
+    fun initComponents(){
 
         val titleText: EditText = findViewById(R.id.editText) as EditText
         titleText.setOnClickListener {
@@ -35,36 +32,29 @@ class RequestInstallation : AppCompatActivity() {
             }
         }
 
-        val buttonEnviar = findViewById<Button>(R.id.enviar)
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage(R.string.Enviado)
+        builder.setTitle(R.string.EnviadoTitulo)
+
+        val buttonEnviar = findViewById<Button>(R.id.sendButton)
         buttonEnviar.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            val descContent = descriptionText.text.toString()
-            if (descContent == ""){
 
+            val issueText: EditText = findViewById(R.id.chatText) as EditText
+            val mainStr: String =titleText.text.toString()
+            val issueStr: String = issueText.text.toString()
+            if(mainStr==""||issueStr==""){
+                //do nothing
             }
-            else {
-
-                createNotificationChannel()
-
-                var builder = NotificationCompat.Builder(this, "1")
-                    .setSmallIcon(R.drawable.person_calendar)
-                    .setContentTitle("Solicitud enviada")
-                    .setContentText("Tu solicitud a sido enviada con exito!")
-                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                    .setAutoCancel(true)
-
-                with(NotificationManagerCompat.from(this)) {
-                    // notificationId is a unique int for each notification that you must define
-                    notify(1, builder.build())
-                }
-
-                startActivity(intent);
+            else{
+                builder.create().show()
+                issueText.setText("")
+                titleText.setText("")
             }
+
         }
     }
 
-    private fun createNotificationChannel() {
+    /*private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -79,5 +69,5 @@ class RequestInstallation : AppCompatActivity() {
                 getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
         }
-    }
+    }*/
 }

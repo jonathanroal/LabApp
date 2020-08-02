@@ -18,13 +18,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Solicitar Instalacion"
+        app:title="Reportar Problema"
         app:titleMarginStart="20dp"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
         app:titleTextColor="@color/colorPrimary" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextIssue"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="13dp"
@@ -64,17 +64,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextIssue" />
 
     <Button
-        android:id="@+id/sendButton"
+        android:id="@+id/adj_pic"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="132dp"
+        android:background="@drawable/round"
+        android:text="Adjuntar Imagen"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/send"
         android:layout_width="0dp"
         android:layout_height="68dp"
         android:layout_marginStart="13dp"
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="41dp"
         android:background="@drawable/round"
-        android:text="ENVIAR"
+        android:text="Enviar"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -20,9 +20,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun initComponents(){
+
         val buttonOperator = findViewById<ImageButton>(R.id.operatorButton)
         buttonOperator.setOnClickListener{
             val intent = Intent(this, OperatorMenu::class.java)
+            startActivity(intent)
+        }
+
+        val buttonSchedule = findViewById<ImageButton>(R.id.scheduleButton)
+        buttonSchedule.setOnClickListener{
+            val intent = Intent(this, LabSchedule::class.java)
             startActivity(intent)
         }
 
@@ -31,5 +38,18 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, RequestLogs::class.java)
             startActivity(intent)
         }
+
+        val reportButton = findViewById<ImageButton>(R.id.reportButton)
+        reportButton.setOnClickListener{
+            val intent = Intent(this, ReportIssues::class.java)
+            startActivity(intent)
+        }
+
+        val chatButton = findViewById<ImageButton>(R.id.chatButton)
+        chatButton.setOnClickListener{
+            val intent = Intent(this, ChatOperador::class.java)
+            startActivity(intent)
+        }
+
     }
 }
